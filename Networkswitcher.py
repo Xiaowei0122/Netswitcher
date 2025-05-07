@@ -272,8 +272,16 @@ class SimpleNetworkSwitcher(tk.Tk):
             return
         new_name = simpledialog.askstring("重命名", f"请输入新的名称 (原: {self.profile_names[name]})")
         if new_name:
+            # 检查是否与其他配置名称重复
+            for key, value in self.profile_names.items():
+                if key != name and value == new_name:
+                    messagebox.showerror("错误", f"名称 '{new_name}' 已被使用")
+                    return
             self.profile_names[name] = new_name
             getattr(self, f"btn_{name}").configure(text=new_name)
+            # 保存更改到配置文件
+            self.save_to_file()
+            messagebox.showinfo("重命名成功", f"已将配置名称更改为 '{new_name}'")
 
     def open_config_window(self):
         name = self.selected_profile.get()
