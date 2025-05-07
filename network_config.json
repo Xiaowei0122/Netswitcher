@@ -1,0 +1,41 @@
+{
+    "configs": {
+        "外网": {
+            "interface": "WLAN",
+            "dhcp": true
+        },
+        "专网": {
+            "interface": "以太网",
+            "dhcp": true
+        },
+        "财政专网": {
+            "interface": "以太网",
+            "dhcp": true
+        },
+        "消防内网": {
+            "interface": "VMware Network Adapter VMnet1",
+            "dhcp": true
+        },
+        "内网": {
+            "interface": "VMware Network Adapter VMnet1",
+            "dhcp": true
+        },
+        "财政内网": {
+            "interface": "以太网",
+            "dhcp": true
+        }
+    },
+    "bindings": {
+        "外网": "WLAN",
+        "专网": "以太网",
+        "财政专网": "以太网",
+        "消防内网": "VMware Network Adapter VMnet1",
+        "内网": "VMware Network Adapter VMnet1",
+        "财政内网": "以太网"
+    },
+    "profile_names": {
+        "内网": "内网",
+        "外网": "外网",
+        "专网": "财政内网"
+    }
+}
