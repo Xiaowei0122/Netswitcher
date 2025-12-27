@@ -30,12 +30,11 @@
         "专网": "以太网",
         "财政专网": "以太网",
         "消防内网": "VMware Network Adapter VMnet1",
-        "内网": "VMware Network Adapter VMnet1",
         "财政内网": "以太网"
     },
     "profile_names": {
-        "内网": "内网",
+        "内网": "消防内网",
         "外网": "外网",
-        "专网": "财政内网"
+        "专网": "财政专网"
     }
 }
